@@ -57,13 +57,14 @@ const Form = () => {
   const isRegister = pageType === 'register';
 
   const register = async (values, onSubmitProps) => {
+    console.log(values);
     const formData = new FormData();
     for (let value in values) {
       formData.append(value, values[value]);
     }
     formData.append('picturePath', values.picture.name);
     axios({
-      url: 'https://sociopedia-backend-sage.vercel.app/auth/register',
+      url: 'https://localhost:3001/auth/register',
       method: 'POST',
       data: formData,
     })
@@ -72,7 +73,7 @@ const Form = () => {
         setPageType('login');
       })
       .catch((err) => {
-        console.log(err.response.data);
+        console.log(err.response);
       });
   };
 
