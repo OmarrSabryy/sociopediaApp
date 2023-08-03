@@ -14,7 +14,7 @@ const FriendsListWidget = ({ userId }) => {
 
   const getUserFriends = async () => {
     const response = await axios({
-      url: `http://localhost:3001/user/${userId}/friends`,
+      url: `https://sociopedia-backend-sage.vercel.app/user/${userId}/friends`,
       method: 'GET',
       headers: { Authorization: `Bearer ${token}` },
     });

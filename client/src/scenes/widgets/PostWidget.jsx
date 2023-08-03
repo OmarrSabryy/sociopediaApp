@@ -36,7 +36,7 @@ const PostWidget = ({
 
   const updateLike = async () => {
     const response = await axios({
-      url: `http://localhost:3001/posts/${postId}/like`,
+      url: `https://sociopedia-backend-sage.vercel.app/posts/${postId}/like`,
       method: 'PATCH',
       headers: { Authorization: `Bearer ${token}` },
       data: { userId: loggedUserId },
@@ -62,7 +62,7 @@ const PostWidget = ({
           height="auto"
           alt="post"
           style={{ borderRadius: '0.75rem', marginTop: '0.75rem' }}
-          src={`http://localhost:3001/assets/${picturePath}`}
+          src={`https://sociopedia-backend-sage.vercel.app/assets/${picturePath}`}
         />
       )}
       <Divider sx={{ marginTop: '0.3rem' }} />

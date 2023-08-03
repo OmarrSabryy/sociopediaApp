@@ -45,7 +45,7 @@ const NewPostWidget = ({ picturePath }) => {
       formData.append('picturePath', image.name);
     }
     const response = await axios({
-      url: `http://localhost:3001/posts`,
+      url: `https://sociopedia-backend-sage.vercel.app/posts`,
       method: 'POST',
       headers: { Authorization: `Bearer ${token}` },
       data: formData,

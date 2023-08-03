@@ -63,7 +63,7 @@ const Form = () => {
     }
     formData.append('picturePath', values.picture.name);
     axios({
-      url: 'http://localhost:3001/auth/register',
+      url: 'https://sociopedia-backend-sage.vercel.app/auth/register',
       method: 'POST',
       data: formData,
     })
@@ -79,7 +79,7 @@ const Form = () => {
   const login = async (values, onSubmitProps) => {
     const body = { email: values.email, password: values.password };
     axios
-      .post(`http://localhost:3001/auth/login`, body)
+      .post(`https://sociopedia-backend-sage.vercel.app/auth/login`, body)
       .then((res) => {
         dispatch(
           setLogin({

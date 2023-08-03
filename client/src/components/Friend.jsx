@@ -23,7 +23,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
 
   const updateFriendsList = async () => {
     const response = await axios({
-      url: `http://localhost:3001/user/${_id}/${friendId}`,
+      url: `https://sociopedia-backend-sage.vercel.app/user/${_id}/${friendId}`,
       method: 'PATCH',
       headers: { Authorization: `Beare ${token}` },
     });

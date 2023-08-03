@@ -20,7 +20,7 @@ const ProfilePage = () => {
 
   const getUser = async () => {
     const response = await axios({
-      url: `http://localhost:3001/user/${userId}`,
+      url: `https://sociopedia-backend-sage.vercel.app/user/${userId}`,
       method: 'GET',
       headers: { Authorization: `Bearer ${token}` },
     });

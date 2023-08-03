@@ -18,7 +18,7 @@ const AdvertWidget = () => {
       <img
         width="100%"
         height="auto"
-        src="http://localhost:3001/assets/info4.jpeg"
+        src="https://sociopedia-backend-sage.vercel.app/assets/info4.jpeg"
         alt="advert"
       />
       <FlexBetween>
